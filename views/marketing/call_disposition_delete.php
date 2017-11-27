@@ -1,0 +1,1 @@
+<?php ob_clean();require_once '../../includes/views/define_include.php';require '../../classes/marketing/call_disposition.php';$call_disp = new CLDisposition();if(isset($_GET['iid'])){    $iid = $_GET['iid'];$delete = $call_disp->deleteActivation($iid);  if ($delete=1) { header('Location: call_disposition_view?iiid='.$delete);}    }?>
